@@ -106,6 +106,10 @@ func (f *Function) TestResults() []*Field {
 	return ps
 }
 
+func (f *Function) ReturnsNone() bool {
+	return len(f.Results) == 0
+}
+
 func (f *Function) ReturnsMultiple() bool {
 	return len(f.Results) > 1
 }
